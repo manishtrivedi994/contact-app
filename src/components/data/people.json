@@ -1,0 +1,30 @@
+[
+    {
+        "id": 1,
+        "name": "Manish Tivedi",
+        "phone": "8986149172",
+        "email": "fsahbfkala@gmail.com",
+        "adminId": 1
+    },
+    {
+        "id": 2,
+        "name": "Random Trivedi",
+        "phone": "6168461316",
+        "email": "khasfalais@gmail.com",
+        "adminId": 2
+    },
+    {
+        "id": 3,
+        "name": "Bandom Pandey",
+        "phone": "53165464",
+        "email": "sdfkvhua_kfi@gmail.com",
+        "adminId": 1
+    },
+    {
+        "id": 4,
+        "name": "Gundl Sundel",
+        "phone": "54846153",
+        "email": "bskfgsdzhbv@gmail.com",
+        "adminId": 3
+    }
+]

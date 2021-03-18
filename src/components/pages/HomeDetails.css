@@ -1,0 +1,25 @@
+.contacts {
+  display: flex;
+  flex-direction: column;
+}
+
+.contact-details {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-left: 30px;
+  color: inherit;
+  text-decoration: inherit;
+  outline: none;
+}
+
+.edit-button {
+  background-color: #4caf50; /* Green */
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+}
