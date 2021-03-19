@@ -5,13 +5,13 @@ import admins from '../../data/admins.json';
 const initialState = {
     people,
     admins,
-    adminId: 0
+    adminId: 0,
+    selectedId: null,
 }
 
 const reducer = (state = initialState, action) => {
     switch (action.type) {
         case actions.ADD_CONTACT:
-            console.log(action.contact);
             const modPeople = [...state.people, action.contact];
             return {
                 ...state,
@@ -25,7 +25,7 @@ const reducer = (state = initialState, action) => {
         case actions.EDIT_CONTACT:
             const index = people.findIndex(p => p.id !== action.id);
             const filteredArr = state.people.filter(p => p.id !== action.id);
-            const modItem = {id: action.id, name: action.name, email: action.email, phone: action.phone, adminId: action.adminId};
+            const modItem = {id: action.id, name: action.name, email: action.email, phone: action.phone,company: action.company, address: action.company, adminId: action.adminId};
             filteredArr.splice(index+1, 0, modItem);
             return{
                 ...state,
@@ -37,6 +37,11 @@ const reducer = (state = initialState, action) => {
             return {
                 ...state,
                 people: [...modArr]
+            }
+        case actions.DISPLAY_DETAILS:
+            return{
+                ...state,
+                selectedId: action.selectedId
             }
 
         default:

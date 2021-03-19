@@ -9,6 +9,10 @@ import PhoneInput from 'react-phone-number-input';
 import short from 'short-uuid';
 import { toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
+import { AiFillCloseCircle } from 'react-icons/ai';
+import Button from '@material-ui/core/Button';
+import { FiUserPlus } from 'react-icons/fi'
+import { AiFillHome } from 'react-icons/ai'
 
 
 
@@ -31,6 +35,8 @@ function Navbar () {
   const defaultOption = adminSelected.name;
 
   const setAdminId = (e) => {
+    
+      dispatch({type: actions.DISPLAY_DETAILS, selectedId: null})
       const idArr = admins.filter(admin => admin.name === e.value);
       const id = idArr[0].id;
       dispatch({type: actions.CHANGE_ADMIN, id: id});
@@ -40,29 +46,51 @@ function Navbar () {
 
   const [name, setName] = useState('');
   const [email, setEmail] = useState('');
-  const [phone, setPhone] = useState();
+  const [phone, setPhone] = useState(null);
+  const [company, setCompany] = useState('');
+  const [address, setAddress] = useState('');
 
   function handleSubmit() {
-    if(adminId === 0){
+    if(name===''){
+      toast('Name cannot be blank!', {position: toast.POSITION.TOP_RIGHT})
+    }
+    else if(email==='' || (email.includes('@') === false) ) {
+      toast('Please provide a valid email!', {position: toast.POSITION.TOP_RIGHT})
+    }
+    else if(company===''){
+      toast('Please provide company name!', {position: toast.POSITION.TOP_RIGHT})
+    }
+    else if(address===''){
+      toast('Please provide your Address!', {position: toast.POSITION.TOP_RIGHT})
+    }
+    else if(adminId === 0){
       toast('Please select an admin!', {position: toast.POSITION.TOP_RIGHT})
       setModalOpen(false)
     }
     else {
+      setPhone(null);
       const id = short.generate();
       const contact = {
-        id, name, email, phone, adminId
+        id, name, email, phone, company, address, adminId
       }
       dispatch({type: actions.ADD_CONTACT, contact: contact});
       setModalOpen(false)
     }
   }
 
+  function handleClose () {
+    setPhone(null);
+    setModalOpen(false)
+  }
+
+
   return (
     <section className="navbar">
-      <a href="/" className="navbar-item">Home</a>
-      <section className="navbar-item" onClick={() => setModalOpen(true)}>+Add</section>
+      {/* <a href="/" className="navbar-item">Home</a> */}
+      <section className="navbar-item" onClick={() => dispatch({type: actions.CHANGE_ADMIN, id: 0})}><AiFillHome size={30}/></section>
+      <section className="navbar-item" onClick={() => setModalOpen(true)}><FiUserPlus size={30}/></section>
       <section className="navbar-item">
-        <Dropdown className="dropdown" options={options} value={defaultOption} placeholder="Select an Admin" style={{}} onChange={(e) => setAdminId(e)}/>
+         <Dropdown className="dropdown" options={options} value={defaultOption} placeholder="Select an Admin" onChange={(e) => setAdminId(e)}/> 
       </section>
 
 
@@ -76,28 +104,45 @@ function Navbar () {
              style={
                {
                  overlay: {
-                   backgroundColor: 'grey'
+                  backgroundColor: '#ef978f',
+                  width: '50%',
+                  height: '73%',
+                  marginLeft: '25%',
+                  marginRight: '25%',
+                  marginTop: '10%',
+                  marginBottom: '25%'
                  },
                  content: {
-                   color: 'blue'
+                   color: 'rebeccapurple',
+                   backgroundColor: '#ffc2ad'
                  }
                }
              }>
-        <h1>Provide Input Fields</h1>
-        <div>
+        <section className="header-modal">
+           <h1 className="header-modal-heading">Provide Input Fields</h1>
+           <AiFillCloseCircle size={70} onClick={() => handleClose()}/>
+        </section>
+        <div className="add-details">
           <p>Name:</p>
-          <input placeholder="Enter Name" onChange={(e) => setName(e.target.value)} type="text"/>
+          
+          <input placeholder="Enter Name" onChange={(e) => setName(e.target.value)} type="text" required/>
+          
           <p>Email:</p>
-          <input placeholder="Enter Email Id" onChange={(e) => setEmail(e.target.value)} type="text"/>
+          <input placeholder="Enter Email Id" onChange={(e) => setEmail(e.target.value)} type="text" required/>
           <p>Phone:</p>
           <PhoneInput
               placeholder="Enter phone number"
               value={phone}
               onChange={setPhone}
-              style={{marginRight: '800px'}}
+              required
           />
-          <button onClick={() => handleSubmit()}>submit</button>
-          <button onClick={() => setModalOpen(false)}>Close</button>
+          <p>Company:</p>
+            <input placeholder="Company" onChange={(e) => setCompany(e.target.value)} type="text" required/>
+          <p>Address:</p>
+            <input placeholder="Address" onChange={(e) => setAddress(e.target.value)} type="text" required/>  
+          <p></p>
+          <Button onClick={() => handleSubmit()} >submit</Button>
+
         </div>
       </Modal>
     </section>

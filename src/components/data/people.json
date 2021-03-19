@@ -2,29 +2,37 @@
     {
         "id": 1,
         "name": "Manish Tivedi",
-        "phone": "8986149172",
-        "email": "fsahbfkala@gmail.com",
-        "adminId": 1
+        "phone": "619-804-2942",
+        "email": "f22xr3elnk@temporary-mail.net",
+        "adminId": 1,
+        "company": "Dhungan Consultancy Services",
+        "address": "4343  Poplar Avenue, TRENTON, NJ, New Jersey, 08646"
     },
     {
         "id": 2,
         "name": "Random Trivedi",
-        "phone": "6168461316",
-        "email": "khasfalais@gmail.com",
-        "adminId": 2
+        "phone": "979-739-8872",
+        "email": "c1gl5dafnsh@temporary-mail.net",
+        "adminId": 2,
+        "company": "Business and Financial Operations Occupations",
+        "address": "2726  James Avenue, Syracuse, NY, New York, 13202"
     },
     {
         "id": 3,
         "name": "Bandom Pandey",
-        "phone": "53165464",
-        "email": "sdfkvhua_kfi@gmail.com",
-        "adminId": 1
+        "phone": "303-477-4493",
+        "email": "s0ia9l4tjq@temporary-mail.net",
+        "adminId": 1,
+        "company": "Lee Wards",
+        "address": "4575  Coleman Avenue, Olancha, CA, California, 93545"
     },
     {
         "id": 4,
         "name": "Gundl Sundel",
-        "phone": "54846153",
-        "email": "bskfgsdzhbv@gmail.com",
-        "adminId": 3
+        "phone": "317-604-4177",
+        "email": "u7k3j777kag@temporary-mail.net",
+        "adminId": 3,
+        "company": "Wealthy Ideas",
+        "address": "4622  Grim Avenue, San Diego, CA, California, 92103"
     }
 ]

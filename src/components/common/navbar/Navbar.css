@@ -26,3 +26,30 @@
   outline: none;
   cursor: pointer;
 }
+
+.add-details {
+  display: flex;
+  flex-direction: column;
+}
+
+.header-modal {
+  display: flex;
+  flex-direction: row;
+}
+
+.header-modal-heading {
+  justify-content: flex-start;
+  width: 95%;
+}
+
+.navbar-item-admins {
+  border: 1px solid green;
+}
+
+.navbar-item-Icon {
+}
+
+.navbar-item-user {
+  display: flex;
+  flex-direction: column;
+}

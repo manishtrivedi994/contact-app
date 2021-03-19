@@ -1,25 +1,56 @@
 .contacts {
   display: flex;
+  height: 150px;
+}
+
+.container {
+  display: flex;
   flex-direction: column;
 }
 
-.contact-details {
+.contact-details-container {
   display: flex;
-  justify-content: center;
-  align-items: center;
-  margin-left: 30px;
-  color: inherit;
-  text-decoration: inherit;
-  outline: none;
+  flex-direction: row;
+  width: 50%;
+  justify-content: flex-start;
 }
 
-.edit-button {
-  background-color: #4caf50; /* Green */
-  border: none;
-  color: white;
-  padding: 15px 32px;
+.contact-details-container1 {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  margin-left: 10%;
+}
+
+.contact-edit-button {
+  width: min-content;
+  height: fit-content;
+}
+
+.avatar-circle {
+  width: 100px;
+  height: 100px;
   text-align: center;
-  text-decoration: none;
-  display: inline-block;
-  font-size: 16px;
+  border-radius: 50%;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+}
+
+.initials {
+  position: relative;
+  top: 25px; /* 25% of parent */
+  font-size: 50px; /* 50% of parent */
+  line-height: 50px; /* 50% of parent */
+  color: #fff;
+  font-family: "Courier New", monospace;
+  font-weight: bold;
+}
+
+.contact-info {
+  padding-left: 10%;
+}
+
+.header-modal {
+  display: flex;
+  flex-direction: row;
 }

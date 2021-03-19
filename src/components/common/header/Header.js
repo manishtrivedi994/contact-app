@@ -1,6 +1,6 @@
 import React from 'react';
 import Navbar from '../../common/navbar/Navbar' ;
-import logo from '../../../images/Contacts_(iOS).png'
+import logo from '../../../images/Contacts_(iOS).png';
 
 import './Header.css';
 
@@ -10,9 +10,9 @@ function Header () {
     <section className="header">
       <section className="header-top">
         <section className="header-top__logo">
-          <a href="/" className="header-logo">
+        <a href="/" className="header-logo">   
             <img alt="header-logo" src={logo} width="100px" height="100px"/>
-          </a>
+        </a>
         </section>
         <section className="header-top__navbar">
           <section className="header-top__navigation">
