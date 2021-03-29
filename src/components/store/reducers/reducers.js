@@ -23,10 +23,10 @@ const reducer = (state = initialState, action) => {
                 adminId: action.id
             }
         case actions.EDIT_CONTACT:
-            const index = people.findIndex(p => p.id !== action.id);
+            const index = people.findIndex(p => p.id === action.id);
             const filteredArr = state.people.filter(p => p.id !== action.id);
             const modItem = {id: action.id, name: action.name, email: action.email, phone: action.phone,company: action.company, address: action.company, adminId: action.adminId};
-            filteredArr.splice(index+1, 0, modItem);
+            filteredArr.splice(index, 0, modItem);
             return{
                 ...state,
                 people: [...filteredArr]
