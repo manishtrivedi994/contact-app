@@ -1,34 +1,34 @@
 [
     {
         "id": 1,
-        "name": "Manish Tivedi",
-        "phone": "619-804-2942",
-        "email": "f22xr3elnk@temporary-mail.net",
+        "name": "Arthur Russell",
+        "phone": "740-0126-40",
+        "email": "a.russell@randatmail.com",
         "adminId": 1,
-        "company": "Dhungan Consultancy Services",
+        "company": "Navya Architect Solutions",
         "address": "4343  Poplar Avenue, TRENTON, NJ, New Jersey, 08646"
     },
     {
         "id": 2,
-        "name": "Random Trivedi",
+        "name": "Eddy Fowler",
         "phone": "979-739-8872",
-        "email": "c1gl5dafnsh@temporary-mail.net",
+        "email": "e.fowler@randatmail.com",
         "adminId": 2,
         "company": "Business and Financial Operations Occupations",
         "address": "2726  James Avenue, Syracuse, NY, New York, 13202"
     },
     {
         "id": 3,
-        "name": "Bandom Pandey",
+        "name": "Carl Richards",
         "phone": "303-477-4493",
-        "email": "s0ia9l4tjq@temporary-mail.net",
+        "email": "c.richards@randatmail.com",
         "adminId": 1,
         "company": "Lee Wards",
         "address": "4575  Coleman Avenue, Olancha, CA, California, 93545"
     },
     {
         "id": 4,
-        "name": "Gundl Sundel",
+        "name": "Maria Kelly",
         "phone": "317-604-4177",
         "email": "u7k3j777kag@temporary-mail.net",
         "adminId": 3,
