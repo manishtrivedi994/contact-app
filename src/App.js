@@ -27,10 +27,6 @@ class App extends Component  {
         <Header />
         <div className="app-container">
           
-        
-
-
-        
          {/* <HeaderNavigation /> */}
  
             <div className="HomeDetails">

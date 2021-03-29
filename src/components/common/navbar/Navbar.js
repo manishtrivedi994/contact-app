@@ -51,7 +51,10 @@ function Navbar () {
   const [address, setAddress] = useState('');
 
   function handleSubmit() {
-    if(name===''){
+    if(adminId === 0){
+      alert('Please select an Admin to add contact!')
+    }
+    else if(name===''){
       toast('Name cannot be blank!', {position: toast.POSITION.TOP_RIGHT})
     }
     else if(email==='' || (email.includes('@') === false) ) {
@@ -62,10 +65,6 @@ function Navbar () {
     }
     else if(address===''){
       toast('Please provide your Address!', {position: toast.POSITION.TOP_RIGHT})
-    }
-    else if(adminId === 0){
-      toast('Please select an admin!', {position: toast.POSITION.TOP_RIGHT})
-      setModalOpen(false)
     }
     else {
       setPhone(null);
